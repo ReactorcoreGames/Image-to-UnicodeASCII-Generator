@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to Unicode/ASCII Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image to Unicode/ASCII Generator</h1>
+        <p>Drag and drop an image (jpg, png, or gif) into the box below.</p>
+        <p>The app will generate a Unicode/ASCII version of the image, respecting its original aspect ratio.</p>
+        <div class="image-container">
+            <div id="drop-zone">
+                <p>Drop image here or click to upload</p>
+                <input type="file" id="file-input" accept="image/*" style="display: none;">
+            </div>
+            <div id="image-preview" style="display: none;">
+                <img id="preview-image" alt="Uploaded image preview">
+            </div>
+        </div>
+        <div class="controls">
+            <label for="max-size">Max Width/Height (1-100):</label>
+            <input type="range" id="max-size" min="1" max="100" value="50">
+            <span id="max-size-value">50</span>
+            <button id="refresh-btn">Refresh</button>
+            <label for="tall-fix">
+                <input type="checkbox" id="tall-fix" checked>
+                Tall Fix
+            </label>
+        </div>
+        <button id="copy-btn">Copy to Clipboard</button>
+        <textarea id="output" readonly></textarea>
+        <p class="author">Author: <a href="https://linktr.ee/reactorcore" target="_blank">https://linktr.ee/reactorcore</a></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
